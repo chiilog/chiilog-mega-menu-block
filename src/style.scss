@@ -1,0 +1,51 @@
+.site-main-navigation ul.wp-block-navigation__container {
+	flex-direction: column;
+	width: 100%;
+}
+
+.wp-block-chiilog-chiilog-mega-menu-block {
+	width: 100%;
+}
+
+.wp-block-chiilog-chiilog-mega-menu-block[aria-expanded="false"] .wp-block-chiilog-chiilog-mega-menu-block__menu-container {
+	display: none;
+}
+
+.wp-block-chiilog-chiilog-mega-menu-block[aria-expanded="true"] .wp-block-chiilog-chiilog-mega-menu-block__menu-container {
+	display: block;
+}
+
+.wp-block-chiilog-chiilog-mega-menu-block__menu-container {
+	width: 100%;
+	z-index: 100;
+}
+
+@media (min-width: 768px) {
+	.wp-block-chiilog-chiilog-mega-menu-block {
+		width: auto;
+	}
+
+	.site-main-navigation ul.wp-block-navigation__container {
+		flex-direction: row;
+		width: auto;
+	}
+
+	.wp-block-chiilog-chiilog-mega-menu-block[aria-expanded="false"] .wp-block-chiilog-chiilog-mega-menu-block__menu-container {
+		opacity: 0;
+		visibility: hidden;
+		height: 0;
+		display: block;
+		width: 0;
+	}
+
+	.wp-block-chiilog-chiilog-mega-menu-block[aria-expanded="true"] .wp-block-chiilog-chiilog-mega-menu-block__menu-container {
+		opacity: 1;
+		visibility: visible;
+		height: auto;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+
+}
